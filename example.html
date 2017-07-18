@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="somecode">
+	<meta name="description" content="somecode, code snippets">
+	<title>Somecode | A minimalist Pico Theme.</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	<link rel="stylesheet" href="assets/css/highlight-default.css">
+	<link rel="stylesheet" href="assets/css/somecode.css">
+
+</head>
+
+<body>
+
+	<main id="main-wrapper">
+		<nav class="navigation">
+			<div class="navbrand">
+				<a href="#"><h1>somecode.tk</h1></a><a class="openbtn" onclick="openNav()">&#9776;</a>
+			</div>
+			<div id="ovnav" class="navmenu">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<ul>
+					<li class="active"><a href="#main-wrapper" data-shortcut="">Index</a></li>
+					<li class=""><a href="#typography" data-shortcut="">Typography</a></li>
+					<li class=""><a href="#buttons" data-shortcut="">Buttons</a></li>
+					<li class=""><a href="#lists" data-shortcut="">Lists</a></li>
+					<li class=""><a href="#forms" data-shortcut="">Forms</a></li>
+					<li class=""><a href="#tables" data-shortcut="">Tables</a></li>
+					<li class=""><a href="#codes" data-shortcut="">Codes</a></li>
+					<li class=""><a href="#utilities" data-shortcut="">Utilities</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<section id="typography">
+			<h5>Typography</h5>
+			<hr>
+			<h1>Heading</h1>
+			<h2>Heading</h2>
+			<h3>Heading</h3>
+			<h4>Heading</h4>
+			<h5>Heading</h5>
+			<h6>Heading</h6>
+			<p>Obcaecati <s>error</s> a, quas fugit hic, <a href="#">accusantium</a> autem <i>necessitatibus praesentium</i> placeat, iusto et <b>soluta expedita</b>! Quisquam repellendus <small>voluptatem</small>, <mark>tempora iste culpa fuga</mark>, <time>on April 29</time>!</p>
+			<p>Quisquam nobis, ad. Iusto, <strong>repudiandae</strong>. Autem ipsa blanditiis, quae, fugit nobis <em>perspiciatis in beatae vitae</em> numquam illo, architecto hic dolor <q>molestiae aliquid</q>.</p>
+		</section>
+
+		<section>
+			<h5>Blockquotes</h5>
+			<hr>
+			<p><q>Nothing to do... chill!</q></p>
+			<blockquote>
+				<p><em>Nothing to do... chill!</em></p>
+			</blockquote>
+		</section>
+
+		<section id="buttons">
+			<h5>Buttons</h5>
+			<hr>
+			<a class="button" href="javascript: void(0)">Default Button</a>
+			<a class="button" disabled href="javascript: void(0)">Default Button Disabled</a>
+			<input type="submit" value="Input: submit">
+			<input type="button" value="Input: button">
+			<input type="reset" value="Input: reset">
+			<button type="submit">Button: submit</button>
+			<button type="button">Button: button</button>
+			<button type="reset">Button: reset</button>
+		</section>
+
+		<section id="lists">
+			<h5>Lists</h5>
+			<hr>
+			<ul>
+				<li>Unordered list item 1</li>
+				<li>Unordered list item 2</li>
+				<li>Unordered list item 3
+					<ul>
+						<li>Unordered list item 3.1</li>
+						<li>Unordered list item 3.2</li>
+						<li>Unordered list item 3.3</li>
+					</ul>
+				</li>
+				<li>Unordered list item 4</li>
+				<li>Unordered list item 5</li>
+			</ul>
+			<ol>
+				<li>Ordered list item 1</li>
+				<li>Ordered list item 2</li>
+				<li>Ordered list item 3
+					<ol>
+						<li>Ordered list item 3.1</li>
+						<li>Ordered list item 3.2</li>
+						<li>Ordered list item 3.3</li>
+					</ol>
+				</li>
+				<li>Ordered list item 4</li>
+				<li>Ordered list item 5</li>
+			</ol>
+		</section>
+
+		<section id="forms">
+			<h5>Forms</h5>
+			<hr>
+			<div class="example">
+				<form>
+					<fieldset>
+						<legend>Legend</legend>
+						<label for="textField">Text field</label>
+						<input type="text" placeholder="Text field" id="textField"><br/>
+						<label for="emailField">Email field</label>
+						<input type="email" id="emailField" placeholder="Email field"><br/>
+						<label for="numberField">Number field</label>
+						<input type="number" id="numberField" placeholder="Number field"><br/>
+						<label for="passwordField">Password field</label>
+						<input type="password" id="passwordField" placeholder="Password field"><br/>
+						<label for="selectField">Select field</label>
+						<select id="selectField">
+										<option value="selectField1">Select field 1</option>
+										<option value="selectField2">Select field 2</option>
+										<option value="selectField3">Select field 3</option>
+										<option value="selectField4">Select field 4</option>
+									</select><br>
+						<label for="searchField">Search field</label>
+						<input type="search" id="searchField" placeholder="Search field"><br/>
+
+						<label for="telField">Tel field</label>
+						<input type="tel" id="telField" placeholder="Tel field"><br/>
+						<label for="urlField">URL field</label>
+						<input type="url" id="urlField" placeholder="URL field"><br/>
+						<label for="radioField">Radio field</label><br>
+						<input type="radio" id="radioField1" name="radioField">
+						<label class="label-inline" for="radioField1">Radio field 1</label><br>
+						<input type="radio" id="radioField2" name="radioField">
+						<label class="label-inline" for="radioField2">Radio field 2</label><br>
+						<label for="radioField">Checkbox field</label><br>
+						<input type="checkbox" id="checkboxField1">
+						<label class="label-inline" for="checkboxField1">Checkbox field 1</label><br>
+						<input type="checkbox" id="checkboxField2">
+						<label class="label-inline" for="checkboxField2">Checkbox field 2</label><br>
+						<label for="textareaField">Textarea field</label>
+						<textarea placeholder="Textarea field" id="textareaField"></textarea>
+						<input type="submit">
+						<input type="reset">
+					</fieldset>
+				</form>
+			</div>
+		</section>
+
+		<section id="tables">
+			<h5>Tables</h5>
+			<hr>
+			<div class="example">
+				<table>
+					<thead>
+						<tr>
+							<tr>
+								<th>Firstname</th>
+								<th>Lastname</th>
+								<th>Age</th>
+							</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Jill</td>
+							<td>Smith</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>Eve</td>
+							<td>Jackson</td>
+							<td>94</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<section id="codes">
+			<h5>Codes</h5>
+			<hr>
+			<div class="example">
+				<pre><code class="css">.somecode {
+	color: #fff;
+}</code></pre>
+				<pre><code class="vb">function someFunc(hungry as Boolean) as String{
+	if hungry then
+		someFunc = "Feed me!"
+	else
+		someFunc = "Well done!"
+	end if
+}</code></pre>
+			</div>
+		</section>
+
+		<section id="utilities">
+			<h5>Utilities</h5>
+			<hr>
+			<div class="clearfix">
+				<img class="float-left" src="http://placehold.it/300/c1c1c1/?text=float+to+left" alt="float to left">
+				<img class="float-right" src="http://placehold.it/300/c1c1c1/?text=float+to+right" alt="float to right">
+			</div>
+		</section>
+
+		<footer class="footer">
+			<section>
+				<p style="text-align:center">Designed by <a target="_blank" href="https://github.com/blackberrymamba" title="blackberrymamba">blackberrymamba</a>. Licensed under the <a target="_blank" href="https://github.com/blackberrymamba/somecode-theme/LICENSE" title="MIT License">MIT License</a>.</p>
+			</section>
+		</footer>
+
+	</main>
+	<script src="assets/js/highlight.pack.js"></script>
+	<script src="assets/js/vanilla.js"></script>
+</body>
+
+</html>

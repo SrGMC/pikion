@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="blackberrymamba">
+    <title>
+      {% if meta.title %}{{ meta.title }}
+        |
+      {% endif %}{{ site_title }}</title>
+    {% if meta.description %}
+      <meta name="description" content="{{ meta.description|striptags }}">
+    {% endif %}
+    {% if meta.robots %}
+      <meta name="robots" content="{{ meta.robots }}">
+    {% endif %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="{{ theme_url }}/assets/css/highlight-default.css">
+    <link rel="stylesheet" href="{{ theme_url }}/assets/css/somecode.css">
+
+  </head>
+
+  <body>
+    <main id="main-wrapper">
+      <nav class="navigation">
+        <div class="navbrand">
+          <a href="{{ "index"|link }}">
+            <h1>{{ site_title }}</h1>
+          </a>
+          <a class="openbtn" onclick="openNav()">&#9776;</a>
+        </div>
+        <div id="ovnav" class="navmenu">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul>
+            {% for page in pages if page.title %}
+              <li{% if page.id == current_page.id %} class="active" {% endif %}>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
