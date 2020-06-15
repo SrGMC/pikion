@@ -32,12 +32,6 @@
         </div>
         <div id="ovnav" class="navmenu">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <ul>
-            {% for page in pages if page.title %}
-              <li{% if page.id == current_page.id %} class="active" {% endif %}>
-                <a href="{{ page.url }}">{{ page.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
+          {{ nested_pages | navigation }}
         </div>
       </nav>
