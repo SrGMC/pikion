@@ -4,12 +4,11 @@
         {% set search_results = pages|apply_search %}
         {% if search_results %}
             <h2>Search results for {{ search_terms|e('html') }}</h2>
+            <ul>
             {% for page in search_results %}
-                <div class="SearchResult">
-                    <h3><a href="{{ page.url }}?match={{ search_terms|e('html') }}">{{ page.title }}</a></h3>
-                    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
-                </div>
+                    <li><b><a href="{{ page.url }}?match={{ search_terms|e('html') }}">{{ page.title }}</a></b>{% if page.description %}: {{ page.description }}{% endif %}</li>
             {% endfor %}
+            </ul>
         {% else %}
             <p>No results found for {{ search_terms|e('html') }}.</p>
         {% endif %}
