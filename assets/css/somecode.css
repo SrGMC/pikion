@@ -286,10 +286,10 @@ input[type="checkbox"]+label, input[type="radio"]+label {
     color: #181818;
     border-radius: 5px;
     padding: 5px;
-    border: none;
+    border: 1px solid #d8d8d8;
 }
 
-.search #search:active {
+.search #search:focus {
   border: 1px solid #BFBFBF;
 }
 
@@ -334,5 +334,6 @@ input[type="checkbox"]+label, input[type="radio"]+label {
     .search #search {
       background: #282828;
       color: #d8d8d8;
+      border: 1px solid #282828;
     }
 }
