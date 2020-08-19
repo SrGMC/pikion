@@ -6,7 +6,7 @@
             <h2>Search results for {{ search_terms|e('html') }}</h2>
             {% for page in search_results %}
                 <div class="SearchResult">
-                    <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+                    <h3><a href="{{ page.url }}?match={{ search_terms|e('html') }}">{{ page.title }}</a></h3>
                     {% if page.description %}<p>{{ page.description }}</p>{% endif %}
                 </div>
             {% endfor %}
