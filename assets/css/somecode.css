@@ -273,6 +273,17 @@ input[type="checkbox"]+label, input[type="radio"]+label {
   margin: 4rem 0;
 }
 
+.search {
+  text-align: center;
+  margin: 20px;
+}
+
+.search #search {
+  margin: 0 10px;
+  height: 24px;
+  width: 50%;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
       color: #D8D8D8;
