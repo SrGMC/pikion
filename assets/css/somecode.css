@@ -279,9 +279,18 @@ input[type="checkbox"]+label, input[type="radio"]+label {
 }
 
 .search #search {
-  margin: 0 10px;
-  height: 24px;
-  width: 50%;
+    margin: 0 10px;
+    height: 24px;
+    width: 50%;
+    background: #d8d8d8;
+    color: #181818;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+}
+
+.search #search:active {
+  border: 1px solid #BFBFBF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -320,5 +329,10 @@ input[type="checkbox"]+label, input[type="radio"]+label {
     
     .navigation.fixed {
       background: #181818;
+    }
+  
+    .search #search {
+      background: #282828;
+      color: #d8d8d8;
     }
 }
