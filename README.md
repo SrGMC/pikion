@@ -3,7 +3,9 @@ A stupidly simple & blazing fast, nextcloud-inspired, theme for an stupidly simp
 
 This is based on [@michael-hxx](https://github.com/michael-hxx) [somecode-theme](https://github.com/michael-hxx/somecode-theme).
 
-Uses [pico-pages-list](https://github.com/nliautaud/pico-pages-list). Please, install it beforehand
+Uses [Pico-Search](https://github.com/PontusHorn/Pico-Search). Please, install it beforehand.
+
+Then, if you want to use the search function, go to `%base_url%/search/<search query>`.
 
 Light mode
 
