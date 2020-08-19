@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="blackberrymamba">
+    <meta name="author" content="SrGMC">
     <title>
       {% if meta.title %}{{ meta.title }}
         |
@@ -28,10 +28,5 @@
           <a href="{{ "index"|link }}">
             <h1>{{ site_title }}</h1>
           </a>
-          <a class="openbtn" onclick="openNav()">&#9776;</a>
-        </div>
-        <div id="ovnav" class="navmenu">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          {{ nested_pages | navigation }}
         </div>
       </nav>
