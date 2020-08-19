@@ -1,3 +1,22 @@
+/* search matching */
+const urlParams = new URLSearchParams(window.location.search);
+const match = urlParams.get("match");
+var matched = false;
+
+if (match != null) {
+    var instance = new Mark(document.querySelector("body"));
+    instance.mark(match, {
+        separateWordSearch: false,
+        each: (e) => {
+            if(!matched) {
+                e.setAttribute('id', 'matched');
+                matched = true;
+            }
+        }
+    });
+    if(matched) document.getElementById('matched').scrollIntoView();
+}
+
 /* menu */
 function openNav() {
   document.getElementById("ovnav").style.display = "block";
