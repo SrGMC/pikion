@@ -1,4 +1,8 @@
 {% include '_header.twig' %}
+  <div class="search">
+    <input id="search" placeholder="Search" type="text">
+    <a href="#" onclick="window.location = {{ base_url }} + '/search/' + document.querySelector('#search').value">Search</a>
+  </div>
   {% if search_terms %}
     <div class="SearchResults">
         {% set search_results = pages|apply_search %}
