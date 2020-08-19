@@ -6,7 +6,7 @@ var matched = false;
 if (match != null) {
     var instance = new Mark(document.querySelector("body"));
     instance.mark(match, {
-        separateWordSearch: false,
+        "accuracy": "complementary",
         each: (e) => {
             if(!matched) {
                 e.setAttribute('id', 'matched');
