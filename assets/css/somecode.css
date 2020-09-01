@@ -269,36 +269,36 @@ input[type="radio"] + label {
 }
 
 .turquoise {
-    background: rgba(26, 188, 156, 0.2);
+    background: rgba(26, 188, 156, 0.4);
 }
 
 .green {
-    background: rgba(46, 204, 113, 0.2);
+    background: rgba(46, 204, 113, 0.4);
 }
 
 .blue {
-    background: rgba(52, 152, 219, 0.2);
+    background: rgba(52, 152, 219, 0.4);
 }
 
 .pink {
-    background: rgba(155, 89, 182, 0.2);
+    background: rgba(155, 89, 182, 0.4);
 }
 
 .black {
-    background: rgba(44, 62, 80, 0.2);
+    background: rgba(44, 62, 80, 0.4);
     color: #fff !important;
 }
 
 .orange {
-    background: rgba(243, 156, 18, 0.2);
+    background: rgba(243, 156, 18, 0.4);
 }
 
 .red {
-    background: rgba(192, 57, 43, 0.2);
+    background: rgba(192, 57, 43, 0.4);
 }
 
 .grey {
-    background: rgba(189, 195, 199, 0.2);
+    background: rgba(189, 195, 199, 0.5);
     color: #181818 !important;
 }
 
