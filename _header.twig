@@ -42,7 +42,7 @@
             <a href="#main-wrapper">Go to top</a>
         </nav>
 
-        <header {% if meta.bg %} style="margin-top: 80px; background: url('{{ meta.bg | url }}')" {% endif %}>
+        <header {% if meta.image %} style="background: url('{{ meta.image | url }}')" {% endif %}>
             {% if meta.header %}
             <div style="font-size: 72px; display: inline-block; margin-right: 15px">{{ meta.header }}</div>
             {% endif %} {% if meta.title %}
