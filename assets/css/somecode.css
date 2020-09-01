@@ -16,7 +16,7 @@ body {
 
 main {
     max-width: 62em;
-    margin: center;
+    margin: auto;
 }
 
 h1,
@@ -52,6 +52,14 @@ h5 {
 
 h6 {
     font-size: 1em;
+}
+
+header {
+    text-align: center;
+}
+
+header p {
+    text-align: center;
 }
 
 small,
@@ -210,7 +218,16 @@ input[type="radio"] + label {
     left: 0;
     right: 0;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+    font-size: 1.4em;
+
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.6) 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .footer {
@@ -274,8 +291,14 @@ input[type="radio"] + label {
         border-bottom: 1px solid #555;
     }
 
-    .navigation.fixed {
-        background: #181818;
+    .navigation {
+        background: rgb(24, 24, 24);
+        background: linear-gradient(
+            180deg,
+            rgba(24, 24, 24, 1) 0%,
+            rgba(24, 24, 24, 0.6) 60%,
+            rgba(24, 24, 24, 0) 100%
+        );
     }
 
     .search #search {
