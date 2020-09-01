@@ -11,12 +11,11 @@
     <h2>Search results for {{ search_terms|e('html') }}</h2>
     <ul>
         {% for page in search_results %}
-        <li>
+        <li style="margin-bottom: 10px;">
             <b><a href="{{ page.url }}?match={{ search_terms|e('html') }}">{{ page.title }}</a></b>
             {% if page.description %}: {{ page.description }}{% endif %}
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;URL: {{ page.url }}
-            <br />
         </li>
         {% endfor %}
     </ul>
