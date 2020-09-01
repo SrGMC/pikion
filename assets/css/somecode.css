@@ -28,6 +28,7 @@ h6 {
     overflow-wrap: break-word;
     line-height: 1.1;
     word-wrap: break-word;
+    padding: 5px;
 }
 
 h1 {
@@ -56,7 +57,7 @@ h6 {
 
 header {
     text-align: center;
-    margin-top: 100px;
+    padding-top: 120px !important;
     padding: 15px;
 }
 
@@ -254,6 +255,51 @@ input[type="radio"] + label {
 
 .search #search:focus {
     border: 1px solid #bfbfbf;
+}
+
+.turquoise,
+.green,
+.blue,
+.pink,
+.black,
+.orange,
+.red,
+.grey {
+    border-radius: 5px;
+}
+
+.turquoise {
+    background: rgba(26, 188, 156, 0.2);
+}
+
+.green {
+    background: rgba(46, 204, 113, 0.2);
+}
+
+.blue {
+    background: rgba(52, 152, 219, 0.2);
+}
+
+.pink {
+    background: rgba(155, 89, 182, 0.2);
+}
+
+.black {
+    background: rgba(44, 62, 80, 0.2);
+    color: #fff !important;
+}
+
+.orange {
+    background: rgba(243, 156, 18, 0.2);
+}
+
+.red {
+    background: rgba(192, 57, 43, 0.2);
+}
+
+.grey {
+    background: rgba(189, 195, 199, 0.2);
+    color: #181818 !important;
 }
 
 @media (prefers-color-scheme: dark) {

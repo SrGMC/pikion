@@ -37,12 +37,13 @@
     </head>
 
     <body>
+        <a id="top"></a>
         <nav class="navigation">
             <a href="{{ base_url }}">{{ site_title }}</a> - <a href="{{ base_url }}/search">Search</a> -
-            <a href="#main-wrapper">Go to top</a>
+            <a href="#top">Go to top</a>
         </nav>
 
-        <header {% if meta.image %} style="background: url('{{ meta.image | url }}')" {% endif %}>
+        <header {% if meta.image %} style="background: url('{{ meta.image | url }}') no-repeat bottom center fixed" {% endif %}>
             {% if meta.header %}
             <div style="font-size: 72px; display: inline-block; margin-right: 15px">{{ meta.header }}</div>
             {% endif %} {% if meta.title %}
