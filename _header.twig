@@ -1,64 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="SrGMC" />
+        <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+        {% if meta.title %}
+        <meta name="title" content="{{ meta.title }}" />
+        {% endif %} {% if meta.description %}
+        <meta name="description" content="{{ meta.description | striptags }}" />
+        {% endif %} {% if meta.robots %}
+        <meta name="robots" content="{{ meta.robots }}" />
+        {% endif %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
+        <link rel="stylesheet" href="{{ theme_url }}/assets/css/highlight-default.css" />
+        <link rel="stylesheet" href="{{ theme_url }}/assets/css/somecode.css" />
+        {% if meta.css %}
+        <link rel="stylesheet" href="{{ meta.css | url }}" />
+        {% endif %}
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="SrGMC">
-    <title>
-      {% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}
-    </title>
-    {% if meta.title %}
-      <meta name="title" content="{{ meta.title }}">
-    {% endif %}
-    {% if meta.description %}
-      <meta name="description" content="{{ meta.description|striptags }}">
-    {% endif %}
-    {% if meta.robots %}
-      <meta name="robots" content="{{ meta.robots }}">
-    {% endif %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-    <link rel="stylesheet" href="{{ theme_url }}/assets/css/highlight-default.css">
-    <link rel="stylesheet" href="{{ theme_url }}/assets/css/somecode.css">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ current_page.url }}" />
+        <meta property="og:title" content="{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}" />
+        {% if meta.description %}
+        <meta property="og:description" content="{{ meta.description | striptags }}" />
+        {% endif %}
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ current_page.url }}">
-    <meta property="og:title" content="{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}">
-    {% if meta.description %}
-      <meta property="og:description" content="{{ meta.description|striptags }}">
-    {% endif %}
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="{{ current_page.url }}" />
+        <meta property="twitter:title" content="{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}" />
+        {% if meta.description %}
+        <meta property="twitter:description" content="{{ meta.description | striptags }}" />
+        {% endif %}
+    </head>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="{{ current_page.url }}">
-    <meta property="twitter:title" content="{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}">
-    {% if meta.description %}
-      <meta property="twitter:description" content="{{ meta.description|striptags }}">
-    {% endif %}
+    <body>
+        <nav class="navigation">
+            <a href="{{ base_url }}">{{ site_title }}</a> - <a href="{{ base_url }}/search">Search</a> -
+            <a href="#main-wrapper">Go to top</a>
+        </nav>
 
-  </head>
+        <header {% if meta.bg %} style="margin-top: 80px; background: url('{{ meta.bg | url }}')" {% endif %}>
+            {% if meta.header %}
+            <div style="font-size: 72px; display: inline-block; margin-right: 15px">{{ meta.header | markdown }}</div>
+            {% endif %} {% if meta.title %}
+            <h1 style="margin: 0; display: inline-block; font-size: 3em">{{ meta.title | markdown }}</h1>
+            {% endif %} {% if meta.description %}
+            <p style="margin: 0">{{ meta.description | markdown }}</p>
+            {% endif %}
+        </header>
 
-  <body>
-    <main id="main-wrapper">
-      <nav class="navigation">
-        <div class="navbrand">
-          <a href="{{ "index"|link }}">
-            <h1>{{ site_title }}</h1>
-            <a href="{{ base_url }}/search" class="search">🔍</a>
-          </a>
-        </div>
-      </nav>
-
-      <header>
-          {% if meta.header %}
-            <div style="font-size: 72px; display: inline-block; margin-right: 15px;">{{ meta.header }}</div>
-          {% endif %} 
-          {% if meta.title %}
-            <h1 style="margin: 0; display: inline-block; font-size: 3em;">{{ meta.title }}</h1>
-          {% endif %}
-          {% if meta.description %}
-            <p style="margin: 0;">{{ meta.description }}</p>
-          {% endif %}
-      </header>
-      <hr>
+        <main id="main-wrapper">
