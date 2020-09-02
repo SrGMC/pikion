@@ -28,7 +28,6 @@ h6 {
     overflow-wrap: break-word;
     line-height: 1.1;
     word-wrap: break-word;
-    padding: 5px;
 }
 
 h1 {
@@ -266,6 +265,7 @@ input[type="radio"] + label {
 .red,
 .grey {
     border-radius: 5px;
+    padding: 5px;
 }
 
 .turquoise {
