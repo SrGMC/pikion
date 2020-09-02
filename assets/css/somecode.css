@@ -17,6 +17,7 @@ body {
 main {
     max-width: 62em;
     margin: auto;
+    padding: 20px;
 }
 
 h1,
