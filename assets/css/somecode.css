@@ -303,6 +303,21 @@ input[type="radio"] + label {
     color: #181818 !important;
 }
 
+.row {
+    display: grid; 
+    grid-gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        display: unset;
+    }
+    
+    .row .col {
+        display: block;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         color: #d8d8d8;
