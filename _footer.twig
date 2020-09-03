@@ -1,13 +1,9 @@
 </main>
+<script>
+MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}};if({{ meta.template }}==="columns"){var html=document.querySelector("main").innerHTML;document.querySelector("main").innerHTML="";var rows=html.split("<p>[row]</p>");for(let i=0;i<rows.length;i+=1){var content='<div class="row">';var cols=rows[i].split("<p>[col]</p>");for(let j=0;j<cols.length;j+=1){content+='<div class="col" style="grid-column: '+(j+1)+"/ "+(j+2)+'; grid-row: 1;">'+cols[j]+"</div>"}content+="</div>";document.querySelector("main").innerHTML+=content}}
+</script>
 <script src="{{ theme_url }}/assets/js/highlight.pack.js"></script>
 <script src="{{ theme_url }}/assets/js/mark.min.js"></script>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
-};
-</script>
 <script id="MathJax-script" async src="{{ theme_url }}/assets/js/tex-mml-chtml.js"></script>
 <script src="{{ theme_url }}/assets/js/vanilla.js"></script>
 {% if meta.js %}
