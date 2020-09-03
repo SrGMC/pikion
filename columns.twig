@@ -1,21 +1,3 @@
 {% include '_header.twig' %}
 {{ content }}
-
-<script>
-var html = document.querySelector("main").innerHTML;
-document.querySelector("main").innerHTML = "";
-
-var rows = html.split("<p>[row]</p>");
-
-for (let i = 0; i < rows.length; i++) {
-    var content = '<div class="row">';
-    var cols = rows[i].split("<p>[col]</p>");
-    for (let j = 0; j < cols.length; j++) {
-        content += '<div class="col" style="grid-column: ' + (j+1) + '/ ' + (j+2) + '; grid-row: 1;">' + cols[j] + '</div>';
-    }
-    content += '</div>';
-
-    document.querySelector("main").innerHTML += content;
-}
-</script>
 {% include '_footer.twig' %}
