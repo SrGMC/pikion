@@ -1,0 +1,11 @@
+        <header {% if meta.image %} style="background: url('{{ meta.image | url }}') no-repeat bottom center fixed" {% endif %}>
+            {% if meta.header %}
+                <div style="font-size: 72px; display: inline-block; margin-right: 15px">{{ meta.header }}</div>
+            {% endif %} {% if meta.title %}
+                <h1 style="margin: 0; display: inline-block; font-size: 3em">{{ meta.title }}</h1>
+            {% endif %} {% if meta.description %}
+                <p style="margin: 0">{{ meta.description }}</p>
+            {% endif %}
+        </header>
+
+        <main id="main-wrapper">
