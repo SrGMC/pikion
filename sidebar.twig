@@ -14,13 +14,6 @@
 			{% for b in meta.blocks %}
 				<div class="block">
 					<h2 style="margin-bottom: 0;" {% if b.color %} class="{{ b.color }}" {% endif %}>{{ b.title }}</h2>
-					{% if b.list %}
-						<ul>
-							{% for item in b.list %}
-								<li>{{ item }}</li>
-							{% endfor %}
-						</ul><br>
-					{% endif %}
 					{% if b.content %}
 						{{ b.content }}
 					{% endif %}
