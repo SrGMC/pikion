@@ -11,23 +11,21 @@
 			<p style="margin: 0">{{ meta.description }}</p>
 		{% endif %}
 		{% if meta.blocks %}
-			<p>
-				{% for b in meta.blocks %}
-					<div class="block">
-						<h2 {% if b.color %} class="{{ b.color }}" {% endif %}>{{ b.title }}</h2><br>
-						{% if b.list %}
-							<ul>
-								{% for item in b.list %}
-									<li>{{ item }}</li>
-								{% endfor %}
-							</ul><br>
-						{% endif %}
-						{% if b.content %}
-							{{ b.content }}
-						{% endif %}
-					</div>
-				{% endfor %}
-			</p>
+			{% for b in meta.blocks %}
+				<div class="block">
+					<h2 {% if b.color %} class="{{ b.color }}" {% endif %}>{{ b.title }}</h2><br>
+					{% if b.list %}
+						<ul>
+							{% for item in b.list %}
+								<li>{{ item }}</li>
+							{% endfor %}
+						</ul><br>
+					{% endif %}
+					{% if b.content %}
+						{{ b.content }}
+					{% endif %}
+				</div>
+			{% endfor %}
 		{% endif %}
 	</div>
 	<div style="display: inline-block; padding-left: 15px;">
