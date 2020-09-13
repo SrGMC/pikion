@@ -13,7 +13,7 @@
 		{% if meta.blocks %}
 			{% for b in meta.blocks %}
 				<div class="block">
-					<h2 {% if b.color %} class="{{ b.color }}" {% endif %}>{{ b.title }}</h2><br>
+					<h2 style="margin-bottom: 0;" {% if b.color %} class="{{ b.color }}" {% endif %}>{{ b.title }}</h2>
 					{% if b.list %}
 						<ul>
 							{% for item in b.list %}
