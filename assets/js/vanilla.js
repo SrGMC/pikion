@@ -17,6 +17,19 @@ if (match != null) {
     if(matched) document.getElementById('matched').scrollIntoView();
 }
 
+/* date replacer */
+const dates = document.querySelectorAll(".to-years");
+for (let i = 0; i < dates.length; i++) {
+  let date = new Date(dates[i].innerText);
+  dates[i].innerHTML = calculateYears(date) + " years.";
+}
+
+function calculateYears(date) {
+  var dateDifMs = Date.now() - date.getTime();
+  var dateDate = new Date(dateDifMs);
+  return Math.abs(dateDate.getUTCFullYear() - 1970);
+}
+
 /* menu */
 function openNav() {
   document.getElementById("ovnav").style.display = "block";
