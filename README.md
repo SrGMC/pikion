@@ -13,12 +13,14 @@ This is based on [@michael-hxx](https://github.com/michael-hxx) [somecode-theme]
   - [Features](#features)
     - [Language settings](#language-settings)
     - [Headers](#headers)
-    - [Column layout](#column-layout)
-    - [Search](#search)
     - [Custom CSS/JS](#custom-cssjs)
     - [MathJax and highlight.js](#mathjax-and-highlightjs)
     - [Backgrounds](#backgrounds)
     - [Light and dark modes](#light-and-dark-modes)
+  - [Templates](#templates)
+    - [Search](#search)
+    - [Column layout](#column-layout)
+    - [Sidebar layout](#sidebar-layout)
   - [Acknowledgements](#acknowledgements)
 
 ## Dependencies
@@ -27,7 +29,6 @@ This is based on [@michael-hxx](https://github.com/michael-hxx) [somecode-theme]
 
 ## Recommendend plugins
 
--   [PicoMinify](https://github.com/NiklasTeich/pico-minify)
 -   [PicoTooManyPages](https://github.com/bigicoin/PicoTooManyPages)
 -   [PicoUI](https://github.com/bigicoin/PicoUI)
 
@@ -63,6 +64,72 @@ Image: %assets_url%/bg.png
 ---
 
 ```
+
+### Custom CSS/JS
+
+You can use custom CSS stylesheets and JS scripts by adding the following properties in the YAML front matter in you documents:
+
+```yaml
+Title: Custom CSS and JS
+---
+CSS: %assets_url%/file.css
+JS: %assets_url%/file.js
+```
+
+### MathJax and highlight.js
+
+Pikion integrates MathJax and highlight.js so you can display your beautiful LaTeX math formulas and highlight code based on the chosen language.
+
+### Backgrounds
+
+Pikion features colorful backgrounds to use in all of your pages.
+
+To use them, simply create any HTML element with one of the following classes:
+
+-   `turquoise`
+-   `green`
+-   `blue`
+-   `pink`
+-   `black`
+-   `orange`
+-   `red`
+-   `grey`
+
+![Background colors](images/backgrounds.png)
+
+### Light and dark modes
+
+Display dark or light modes dependant on browser settings
+
+![Dark mode](images/dark.png)
+
+![Light mode](images/light.png)
+
+## Templates
+
+### Search
+
+Pikion features a search template based on Pico-Search. To use it, create a new file called `search.md` set to the `search` template.
+
+```yaml
+---
+Header: 🔍
+Title: Search
+Template: search
+Description: Type to search across the website
+---
+
+```
+
+Then, to use it, go to `%base_url%/search/<search query>`, or click on the search link at the navigation bar.
+
+![Search](images/search.png)
+
+Search template also features highlighting al matching queries when you open a page from the search page.
+
+![Make a query in the search page](images/search_highlight1.png)
+
+![And pikion-theme will highlight all the matches](images/search_highlight2.png)
 
 ### Column layout
 
@@ -110,69 +177,45 @@ Integer quis quam eu metus imperdiet dictum. Quisque eu faucibus massa. Suspendi
 
 ![Column layout](images/columns.png)
 
-### Search
+### Sidebar layout
 
-Pikion features a search template based on Pico-Search. To use it, create a new file called `search.md` set to the `search` template.
+Pikion also features a sidebar layout that moves the common top header in the other templates into a sidebar, while adding new features
 
-```yaml
----
-Header: 🔍
-Title: Search
-Template: search
-Description: Type to search across the website
----
+In order to use this layout, in the YAML Front Matter set the `Template` value to `sidebar`. However, images set in `Image` won't be displayed.
 
+This template also introduces a new variable `Blocks`. `Blocks` is a JSON list that will be rendered and displayed in the sidebar. Each JSON, called _block_ has the following structure:
+
+```json
+{
+  "title": "Block title",
+  "color": "red",                                   // Block title background color.
+  "content": "Here goes the <i>block</i> content"   // Supports HTML
+}
 ```
 
-Then, to use it, go to `%base_url%/search/<search query>`, or click on the search link at the navigation bar.
+**Notes:**
 
-![Search](images/search.png)
+1. JSON attributes are case sensitive
+2. See [Features > Backgrounds](#backgrounds) for color values.
 
-Search template also features highlighting al matching queries when you open a page from the search page.
+![Sidebar layout](images/sidebar.png)
 
-![Make a query in the search page](images/search_highlight1.png)
-
-![And pikion-theme will highlight all the matches](images/search_highlight2.png)
-
-### Custom CSS/JS
-
-You can use custom CSS stylesheets and JS scripts by adding the following properties in the YAML front matter in you documents:
-
-```yaml
-Title: Custom CSS and JS
+```md
 ---
-CSS: %assets_url%/file.css
-JS: %assets_url%/file.js
+Header: 🐕
+Title: Toby
+Description: My good boy
+Template: sidebar
+Blocks:
+- { "title": "Info", "color": "blue", "content": "<ul><li>Birthday: 23/04/2019 (<span class='years'>2018-04-23</span> years old.)</li><li>Black male labrador</li><li>28 kg.</li></ul>"}
+- { "title": "About", "color": "green", "content": "He likes sausages, pork and ice cubes"}
+---
+
+## Vet things
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet lacus eget sapien facilisis malesuada id in nisi. Donec sit amet nulla tempor, lacinia justo ac, malesuada ex. Fusce vel diam in tellus scelerisque pulvinar et at leo. Nullam eget dictum lorem, tincidunt lobortis ipsum. Sed nisi eros, bibendum ac sollicitudin non, congue ut sem. Sed sed urna ac massa tempor lobortis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vel felis quis odio convallis volutpat quis sit amet felis. Phasellus elementum bibendum lectus, ullamcorper venenatis sapien interdum congue. Nulla eget faucibus tellus. Nulla vestibulum porttitor diam eget molestie. Nunc sit amet est a est sagittis rhoncus et ac lectus. Morbi eros nibh, molestie sed tristique et, gravida et est. Sed quam risus, porta dapibus tempor hendrerit, maximus et nibh. Curabitur scelerisque eget velit non cursus. Cras quam massa, efficitur vitae tortor sit amet, faucibus sodales felis.
+
 ```
-
-### MathJax and highlight.js
-
-Pikion integrates MathJax and highlight.js so you can display your beautiful LaTeX math formulas and highlight code based on the chosen language.
-
-### Backgrounds
-
-Pikion features colorful backgrounds to use in all of your pages.
-
-To use them, simply create any HTML element with one of the following classes:
-
--   `turquoise`
--   `green`
--   `blue`
--   `pink`
--   `black`
--   `orange`
--   `red`
--   `grey`
-
-![Background colors](images/backgrounds.png)
-
-### Light and dark modes
-
-Display dark or light modes dependant on browser settings
-
-![Dark mode](images/dark.png)
-
-![Light mode](images/light.png)
 
 ## Acknowledgements
 
