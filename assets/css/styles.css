@@ -28,6 +28,7 @@ main.sidebar {
 
 main.sidebar div:first-child {
     grid-column: 1/2;
+    width: 400px;
 }
 
 main.sidebar div:last-child {
@@ -333,6 +334,10 @@ input[type="radio"] + label {
 
     main.sidebar {
         display: block;
+    }
+
+    main.sidebar div:first-child {
+        width: unset;
     }
 }
 
