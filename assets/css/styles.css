@@ -20,6 +20,20 @@ main {
     padding: 0 20px;
 }
 
+main.sidebar {
+    margin-top: 100px;
+    display: grid;
+    grid-gap: 15px; 
+}
+
+main.sidebar div:first-child {
+    grid-column: 1/2;
+}
+
+main.sidebar div:last-child {
+    grid-column: 2/3;
+}
+
 h1,
 h2,
 h3,
@@ -315,6 +329,10 @@ input[type="radio"] + label {
     
     .row .col {
         display: block;
+    }
+
+    main.sidebar {
+        display: unset;
     }
 }
 

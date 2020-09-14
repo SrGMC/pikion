@@ -18,10 +18,10 @@ if (match != null) {
 }
 
 /* date replacer */
-const dates = document.querySelectorAll(".to-years");
+const dates = document.querySelectorAll(".years");
 for (let i = 0; i < dates.length; i++) {
   let date = new Date(dates[i].innerText);
-  dates[i].innerHTML = calculateYears(date) + " years.";
+  dates[i].innerHTML = calculateYears(date);
 }
 
 function calculateYears(date) {
