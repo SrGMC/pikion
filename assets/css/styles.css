@@ -24,7 +24,6 @@ main.sidebar {
     margin-top: 100px;
     display: grid;
     grid-gap: 15px;
-    margin-top: 100px;
 }
 
 main.sidebar div:first-child {
@@ -333,7 +332,7 @@ input[type="radio"] + label {
     }
 
     main.sidebar {
-        display: unset;
+        display: block;
     }
 }
 
