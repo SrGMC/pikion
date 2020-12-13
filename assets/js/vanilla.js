@@ -49,7 +49,7 @@ document.querySelector("main").innerHTML = document
 
     level = parseInt(openLevel);
 
-    var anchor = titleText.toLowerCase().replace(/ /g, "-");
+    var anchor = titleText.toLowerCase().replace(/ /g, "-").replace(/[\\\!\|\"\@\·\#\$\~\%\€\&\¬\/\(\)\=\?\'\¡\¿\€\[\]\`\+\*\^\{\}\´\¨\<\>\,\;\.\:]/gi, '');
 
     return (
       '<a name="' + anchor + '"></a><h' + openLevel + '>' + titleText + "</h" + closeLevel +">"
