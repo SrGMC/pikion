@@ -6,6 +6,7 @@
 {% endif %}
     <head>
         <meta charset="utf-8" />
+        <link rel="shortcut icon" href="{{ theme_url }}/assets/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {% if meta.author %}
             <meta name="author" content="{{ meta.author }}" />
@@ -18,7 +19,6 @@
         {% endif %} {% if meta.robots %}
             <meta name="robots" content="{{ meta.robots }}" />
         {% endif %}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
         <link rel="stylesheet" href="{{ theme_url }}/assets/css/highlight-default.css" />
         <link rel="stylesheet" href="{{ theme_url }}/assets/css/styles.css" />
         {% if meta.css %}

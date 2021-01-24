@@ -11,6 +11,7 @@ This is based on [@michael-hxx](https://github.com/michael-hxx) [somecode-theme]
   - [Dependencies](#dependencies)
   - [Recommendend plugins](#recommendend-plugins)
   - [Features](#features)
+    - [Customizability](#customizability)
     - [Language settings](#language-settings)
     - [Headers](#headers)
     - [Custom CSS/JS](#custom-cssjs)
@@ -33,6 +34,12 @@ This is based on [@michael-hxx](https://github.com/michael-hxx) [somecode-theme]
 -   [PicoUI](https://github.com/bigicoin/PicoUI)
 
 ## Features
+
+### Customizability
+
+Feel free to modify anything from the theme. JavaScript files and CSS files are located in the `assets/` folder
+
+Changing the favicon is also recommended, as the default one is best suited for Nextcloud's PicoCMS.
 
 ### Language settings
 
@@ -71,7 +78,7 @@ You can use custom CSS stylesheets and JS scripts by adding the following proper
 
 ```yaml
 Title: Custom CSS and JS
----
+...
 CSS: %assets_url%/file.css
 JS: %assets_url%/file.js
 ```
@@ -99,7 +106,7 @@ To use them, simply create any HTML element with one of the following classes:
 
 ### Light and dark modes
 
-Display dark or light modes dependant on browser settings
+Dark and light modes are dependant on browser settings
 
 ![Dark mode](images/dark.png)
 
