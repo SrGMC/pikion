@@ -1,6 +1,5 @@
 html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
-        Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
     /*font-size: 62.5%;*/
 }
 
@@ -8,7 +7,7 @@ body {
     margin: 0 auto;
     color: #222;
     background: #fff;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.618;
     letter-spacing: 0.01em;
     transition: 0.3s all;
@@ -47,27 +46,22 @@ h6 {
 }
 
 h1 {
-    font-size: 2.35em;
+    font-size: 3rem;
 }
-
 h2 {
-    font-size: 2em;
+    font-size: 2.5rem;
 }
-
 h3 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
 }
-
 h4 {
-    font-size: 1.5em;
+    font-size: 1.25rem;
 }
-
 h5 {
-    font-size: 1.25em;
+    font-size: 1rem;
 }
-
 h6 {
-    font-size: 1em;
+    font-size: 0.875rem;
 }
 
 header {
@@ -246,12 +240,7 @@ input[type="radio"] + label {
     font-size: 1.4em;
 
     background: rgb(255, 255, 255);
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0.6) 60%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.6) 60%, rgba(255, 255, 255, 0) 100%);
 }
 
 .navigation a svg {
@@ -330,7 +319,7 @@ input[type="radio"] + label {
 }
 
 .row {
-    display: grid; 
+    display: grid;
     grid-gap: 10px;
 }
 
@@ -338,7 +327,7 @@ input[type="radio"] + label {
     .row {
         display: unset;
     }
-    
+
     .row .col {
         display: block;
     }
@@ -391,12 +380,7 @@ input[type="radio"] + label {
 
     .navigation {
         background: rgb(24, 24, 24);
-        background: linear-gradient(
-            180deg,
-            rgba(24, 24, 24, 1) 0%,
-            rgba(24, 24, 24, 0.6) 60%,
-            rgba(24, 24, 24, 0) 100%
-        );
+        background: linear-gradient(180deg, rgba(24, 24, 24, 1) 0%, rgba(24, 24, 24, 0.6) 60%, rgba(24, 24, 24, 0) 100%);
     }
 
     .search #search {
